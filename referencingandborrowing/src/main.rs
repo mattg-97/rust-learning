@@ -25,15 +25,15 @@ fn calculate_length(s: &String) -> usize { //& indicates were taking a reference
 }// s goes out of scope here, but because it is a reference it isnt dropped as it isnt 'owned'
 
 fn change(some_string: &mut String) {
-    some_string.push_srt(", world!"); //because the reference is mutable we can change the data we
+    some_string.push_str(", world!"); //because the reference is mutable we can change the data we
     //are referencing without owning it
 }
 
 // reference dangling
-fn dangle() -> &String { // dangle returns a reference to a String
+//fn dangle() -> &String { // dangle returns a reference to a String
 
-    let s = String::from("hello"); // s is a new String
+  //  let s = String::from("hello"); // s is a new String
 
-    &s // we return a reference to the String, s
-} // Here, s goes out of scope, and is dropped. Its memory goes away.
+    //&s // we return a reference to the String, s
+//} // Here, s goes out of scope, and is dropped. Its memory goes away.
   // Danger!
