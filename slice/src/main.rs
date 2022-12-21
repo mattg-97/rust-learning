@@ -15,19 +15,21 @@ fn main() {
     let s = String::from("hello world");
 
     let hello = &s[0..5];
+    // let hello = &s[..5]; can also be written as 
+    // drop the zero for cleaner syntax
     let world = &s[6..11];
 
     println!("{} {}", hello, world);
 }
 
-fn first_word(s: &String) -> usize {
+fn first_word(s: &str) -> &str {
+
     let bytes = s.as_bytes();
 
-    for (i, &item) in bytes.iter().enumerate() {
+    for(i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
-            return i;
+            return &s[..i];
         }
     }
-
-    s.len()
+    &s[..]
 }

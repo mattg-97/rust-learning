@@ -1,0 +1,1 @@
+/Users/matthewgill/Documents/rust/rust-learning/restaurant/target/debug/librestaurant.rlib: /Users/matthewgill/Documents/rust/rust-learning/restaurant/src/front_of_house/hosting.rs /Users/matthewgill/Documents/rust/rust-learning/restaurant/src/front_of_house.rs /Users/matthewgill/Documents/rust/rust-learning/restaurant/src/lib.rs
